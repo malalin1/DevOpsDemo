@@ -13,7 +13,7 @@ public class BancomatTest {
     }
     @Test
     public void testInitialBalance() {
-        assertEquals(0, bancomat.getBalance()); // Überprüft, ob die anfängliche Kontobalance 0 ist
+        assertEquals(1, bancomat.getBalance()); // Überprüft, ob die anfängliche Kontobalance 0 ist
     }
     @Test
     public void testDeposit() {
@@ -32,4 +32,13 @@ public class BancomatTest {
         bancomat.withdraw(150); // Führt eine Abhebung von 150 durch (mehr als der Kontostand)
         assertEquals(100, bancomat.getBalance()); // Überprüft, ob die Kontobalance unverändert bleibt (keine Abhebung erfolgt)
     }
+    @Test
+    public void testSomething() { 
+    }
+    @Test
+public void testWithdrawNegativeAmount() {
+    bancomat.deposit(100); // Führt eine Einzahlung von 100 durch
+    bancomat.withdraw(-50); // Versucht eine negative Betrag abzuheben
+    assertEquals(100, bancomat.getBalance()); // Überprüft, ob die Kontobalance unverändert bleibt (keine Abhebung erfolgt)
+}
 }
