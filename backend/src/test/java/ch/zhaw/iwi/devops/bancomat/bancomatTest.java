@@ -1,4 +1,4 @@
-package ch.zhaw.iwi.devops.demo;
+package ch.zhaw.iwi.devops.bancomat;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -39,3 +39,5 @@ public class bancomatTest {
         assertEquals(100, bancomat.getBalance()); // Überprüft, ob die Kontobalance unverändert bleibt (keine Abhebung erfolgt)
     }
 }
+
+
