@@ -1,8 +1,8 @@
-package ch.zhaw.iwi.devops.bancomat;
+package ch.zhaw.iwi.devops.Bank;
 
-public class bancomat {
+public class Bancomat {
     private int balance; // Variable zur Speicherung der Kontobalance
-    public bancomat() {
+    public Bancomat() {
         balance = 0; // Setzt die Kontobalance beim Erstellen eines Bancomat-Objekts auf 0
     }
     public int getBalance() {
@@ -11,7 +11,7 @@ public class bancomat {
     public void deposit(int amount) {
         if (amount > 0) {
             balance += amount; // Führt eine Einzahlung durch, indem der Betrag zur Kontobalance hinzugefügt wird
-                }
+        }
     }
     public void withdraw(int amount) {
         if (amount > 0 && amount <= balance) {
@@ -21,4 +21,3 @@ public class bancomat {
         }
     }
 }
-
